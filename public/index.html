@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amigo Secreto - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Amigo Secreto - Login</h1>
+  
+  <form id="login-form">
+    <label for="name">Escolha seu nome:</label>
+    <select id="name">
+      <option value="">Selecione</option>
+      <option value="Leo kruga">Leo kruga</option>
+      <option value="Brune mines">Brune mines</option>
+      <option value="Pedro deivid">Pedro deivid</option>
+      <option value="Bruno dal">Bruno dal</option>
+      <option value="amanda sheme">amanda sheme</option>
+      <option value="jader junio">jader junio</option>
+      <option value="kau rito">kau rito</option>
+      <option value="matehus frança">matehus frança</option>
+      <option value="kameli">kameli</option>
+      <option value="julia vais">julia vais</option>
+      <option value="loeza vebester">loeza vebester</option>
+      <option value="carol">carol</option>
+      <option value="murilo peroba">murilo peroba</option>
+      <option value="neves">neves</option>
+      <option value="mateus chimia">mateus chimia</option>
+    </select>
+
+    <label for="code">Digite o código secreto:</label>
+    <input type="password" id="code" placeholder="Código Secreto">
+
+    <button type="button" onclick="login()">Entrar</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
