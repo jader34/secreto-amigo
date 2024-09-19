@@ -33,9 +33,13 @@ const participantes = [
     const codigoDigitado = document.getElementById('code').value;
     const resultadoDiv = document.getElementById('resultado');
   
+    // Limpa o estado anterior
+    resultadoDiv.classList.remove('show');
+  
     // Verifica se o usuário escolheu um nome
     if (!nomeSelecionado) {
       resultadoDiv.textContent = 'Por favor, selecione seu nome.';
+      resultadoDiv.classList.add('show');
       return;
     }
   
@@ -49,11 +53,10 @@ const participantes = [
     if (participante && participante.codigo === codigoDigitado) {
       const amigo = sorteio.find(p => p.nome === nomeSelecionado).amigo;
       resultadoDiv.textContent = `Você tirou: ${amigo}`;
-      
-      // Exibe a animação ao revelar o amigo secreto
       resultadoDiv.classList.add('show');
     } else {
+      // Exibe "Código incorreto" com animação
       resultadoDiv.textContent = 'Código secreto incorreto. Tente novamente.';
-      resultadoDiv.classList.remove('show'); // Remove a animação se o código estiver errado
+      resultadoDiv.classList.add('show');
     }
   }
