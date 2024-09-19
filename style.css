@@ -116,3 +116,25 @@ button:hover {
       font-size: 1.3em;
   }
 }
+
+/* Estilos dos confetes (usando emojis) */
+.confetti {
+  position: fixed;
+  font-size: 1.5rem;  /* Aumentar o tamanho do emoji */
+  opacity: 0.8;
+  z-index: 9999;
+  pointer-events: none;
+  animation: explosion 1.5s ease-out forwards;
+}
+
+/* Animação para simular a explosão */
+@keyframes explosion {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(var(--x) * 1vw), calc(var(--y) * 1vh)) scale(0.5);
+    opacity: 0;
+  }
+}
