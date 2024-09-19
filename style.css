@@ -1,85 +1,118 @@
-/* Centralizando a página */
+/* Estilos básicos */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f3f0f9; /* Fundo em tom pastel */
-  color: #5b3f8d; /* Texto em roxo escuro */
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f0f9; /* Fundo suave */
+  color: #5b3f8d; /* Texto roxo escuro */
   margin: 0;
   padding: 0;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Centralizando o conteúdo */
+/* Centralizando o conteúdo com responsividade */
 .container {
   background-color: white;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
   max-width: 400px;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
+/* Títulos e textos */
 h1 {
-  color: #6a5b8c; /* Tom pastel de roxo */
+  color: #6a5b8c;
+  font-size: 1.8em;
   margin-bottom: 20px;
 }
 
+/* Rótulos */
 label {
   font-size: 1.2em;
-  color: #7a4a9d; /* Tom pastel de roxo */
+  margin-bottom: 8px;
+  display: block;
+  color: #7a4a9d;
 }
 
+/* Inputs e selects */
 select, input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #d6d1e1; /* Borda leve */
-  border-radius: 5px;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #d6d1e1;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
 }
 
+select:focus, input:focus {
+  border-color: #8e6ba1;
+}
+
+/* Botão com efeito */
 button {
-  background-color: #8e6ba1; /* Botão em tom pastel de roxo */
+  background-color: #8e6ba1;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
+  font-size: 1.1em;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-  background-color: #7f5b92; /* Tom mais escuro ao passar o mouse */
+  background-color: #7f5b92;
+  transform: scale(1.05);
 }
 
 /* Animação de revelação */
 #resultado {
   margin-top: 20px;
   font-size: 1.5em;
-  color: #6a5b8c; /* Tom pastel de roxo */
+  color: #6a5b8c;
   text-align: center;
-  opacity: 0; /* Invisível inicialmente */
-  transform: scale(0.8); /* Escala menor no início */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Animação suave */
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Quando o resultado for exibido */
+/* Exibe o resultado com animação */
 #resultado.show {
-  opacity: 1; /* Mostra */
-  transform: scale(1); /* Escala normal */
+  opacity: 1;
+  transform: scale(1);
 }
 
-/* Ajuste para dispositivos móveis */
+/* Estilos para dispositivos móveis */
 @media (max-width: 600px) {
-  .container {
-      padding: 20px;
-  }
-
   h1 {
       font-size: 1.5em;
+  }
+
+  label {
+      font-size: 1.1em;
+  }
+
+  select, input, button {
+      font-size: 1em;
+      padding: 10px;
+  }
+
+  button {
+      padding: 12px;
+  }
+
+  .container {
+      padding: 20px;
+      border-radius: 12px;
+  }
+
+  #resultado {
+      font-size: 1.3em;
   }
 }
