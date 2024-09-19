@@ -1,0 +1,17 @@
+[
+    { "nome": "Leo kruga", "amigo": "Bruno dal" },
+    { "nome": "Brune mines", "amigo": "Pedro deivid" },
+    { "nome": "Pedro deivid", "amigo": "amanda sheme" },
+    { "nome": "Bruno dal", "amigo": "kau rito" },
+    { "nome": "amanda sheme", "amigo": "jader junio" },
+    { "nome": "jader junio", "amigo": "matehus frança" },
+    { "nome": "kau rito", "amigo": "kameli" },
+    { "nome": "matehus frança", "amigo": "julia vais" },
+    { "nome": "kameli", "amigo": "loeza vebester" },
+    { "nome": "julia vais", "amigo": "carol" },
+    { "nome": "loeza vebester", "amigo": "murilo peroba" },
+    { "nome": "carol", "amigo": "neves" },
+    { "nome": "murilo peroba", "amigo": "mateus chimia" },
+    { "nome": "neves", "amigo": "Leo kruga" },
+    { "nome": "mateus chimia", "amigo": "Brune mines" }
+]

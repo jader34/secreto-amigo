@@ -17,31 +17,18 @@ const participantes = [
     { nome: 'mateus chimia', codigo: 'math' }
   ];
   
-  // Função para embaralhar a lista de participantes e sortear
-  function sortearAmigoSecreto() {
-    let amigos = [...participantes]; // Cria uma cópia da lista de participantes
-    let sorteio = [];
-  
-    // Embaralha a lista
-    amigos.sort(() => Math.random() - 0.5);
-  
-    // Faz o sorteio garantindo que ninguém tire a si mesmo
-    for (let i = 0; i < participantes.length; i++) {
-      let amigo;
-      do {
-        amigo = amigos[Math.floor(Math.random() * amigos.length)];
-      } while (amigo.nome === participantes[i].nome || sorteio.some(s => s.amigo === amigo.nome));
-  
-      sorteio.push({ nome: participantes[i].nome, amigo: amigo.nome });
-    }
-  
-    return sorteio;
+  // Função para carregar o sorteio do arquivo JSON
+  function carregarSorteio() {
+    return fetch('sorteio.json')
+      .then(response => response.json())
+      .catch(error => {
+        console.error('Erro ao carregar o sorteio:', error);
+        return [];
+      });
   }
   
-  const sorteio = sortearAmigoSecreto();
-  
   // Função de login e verificação do código
-  function login() {
+  async function login() {
     const nomeSelecionado = document.getElementById('name').value;
     const codigoDigitado = document.getElementById('code').value;
     const resultadoDiv = document.getElementById('resultado');
@@ -52,6 +39,9 @@ const participantes = [
       return;
     }
   
+    // Carrega o sorteio do arquivo JSON
+    const sorteio = await carregarSorteio();
+  
     // Encontra o participante com o nome selecionado
     const participante = participantes.find(p => p.nome === nomeSelecionado);
   
@@ -59,7 +49,11 @@ const participantes = [
     if (participante && participante.codigo === codigoDigitado) {
       const amigo = sorteio.find(p => p.nome === nomeSelecionado).amigo;
       resultadoDiv.textContent = `Você tirou: ${amigo}`;
+      
+      // Exibe a animação ao revelar o amigo secreto
+      resultadoDiv.classList.add('show');
     } else {
       resultadoDiv.textContent = 'Código secreto incorreto. Tente novamente.';
+      resultadoDiv.classList.remove('show'); // Remove a animação se o código estiver errado
     }
   }

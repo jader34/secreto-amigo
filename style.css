@@ -1,48 +1,85 @@
+/* Centralizando a página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f0f9; /* Fundo em tom pastel */
+  color: #5b3f8d; /* Texto em roxo escuro */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Centralizando o conteúdo */
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #6a5b8c; /* Tom pastel de roxo */
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.2em;
+  color: #7a4a9d; /* Tom pastel de roxo */
+}
+
+select, input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #d6d1e1; /* Borda leve */
+  border-radius: 5px;
+}
+
+button {
+  background-color: #8e6ba1; /* Botão em tom pastel de roxo */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7f5b92; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Animação de revelação */
+#resultado {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #6a5b8c; /* Tom pastel de roxo */
+  text-align: center;
+  opacity: 0; /* Invisível inicialmente */
+  transform: scale(0.8); /* Escala menor no início */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Animação suave */
+}
+
+/* Quando o resultado for exibido */
+#resultado.show {
+  opacity: 1; /* Mostra */
+  transform: scale(1); /* Escala normal */
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 600px) {
+  .container {
+      padding: 20px;
   }
-  
+
   h1 {
-    text-align: center;
-    margin-bottom: 20px;
+      font-size: 1.5em;
   }
-  
-  form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    width: 100%;
-  }
-  
-  label, select, input, button {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
-  #resultado {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-    color: #333;
-  }
+}
