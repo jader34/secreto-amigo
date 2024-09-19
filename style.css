@@ -120,11 +120,11 @@ button:hover {
 /* Estilos dos confetes (usando emojis) */
 .confetti {
   position: fixed;
-  font-size: 1.5rem;  /* Aumentar o tamanho do emoji */
+  font-size: 2.5rem;  /* Aumentar o tamanho do emoji */
   opacity: 0.8;
   z-index: 9999;
   pointer-events: none;
-  animation: explosion 1.5s ease-out forwards;
+  animation: explosion 2.5s ease-out forwards;
 }
 
 /* Animação para simular a explosão */
