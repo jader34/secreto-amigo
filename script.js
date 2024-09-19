@@ -15,7 +15,7 @@ const participantes = [
     { nome: 'murilo peroba', codigo: 'beach' },
     { nome: 'neves', codigo: 'lindo' },
     { nome: 'mateus chimia', codigo: 'math' },
-    { nome: 'gabreu freitas', codigo: 'vainessa'}
+    { nome: 'gabreu freitas', codigo: 'vainessa' }
   ];
   
   // Função para carregar o sorteio do arquivo JSON
