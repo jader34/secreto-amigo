@@ -1,0 +1,58 @@
+[
+    {
+        "nome": "Leo kruga",
+        "sugestoes": [
+            { "item": "Tico", "link": "https://exemplo.com/camisa-do-time" },
+            { "item": "Livro de fantasia", "link": "https://exemplo.com/livro-de-fantasia" },
+            { "item": "Mouse gamer", "link": "https://exemplo.com/mouse-gamer" }
+        ]
+    },
+    {
+        "nome": "Brune mines",
+            "sugestoes": [
+            { "item": "Quadro decorativo", "link": "https://exemplo.com/quadro-decorativo" },
+            { "item": "Jogo de tabuleiro", "link": "https://exemplo.com/jogo-de-tabuleiro" },
+            { "item": "Moletom", "link": "https://exemplo.com/moletom" }
+        ]
+    },
+    {
+        "nome": "Pedro deivid",
+        "sugestoes": [
+            { "item": "Fone de ouvido", "link": "https://exemplo.com/fone-de-ouvido" },
+            { "item": "Caneca personalizada", "link": "https://exemplo.com/caneca-personalizada" },
+            { "item": "Kit de churrasco", "link": "https://exemplo.com/kit-de-churrasco" }
+        ]
+    },
+    {
+        "nome": "Bruno dal",
+        "sugestoes": [
+            { "item": "Copo de cerveja", "link": "https://exemplo.com/copo-de-cerveja" },
+            { "item": "Kit de cerveja artesanal", "link": "https://exemplo.com/kit-de-cerveja-artesanal" },
+            { "item": "Kit de barbear", "link": "" }
+        ]
+    },
+    {
+        "nome": "amanda sheme",
+        "sugestoes": [
+            { "item": "Kit de maquiagem", "link": "https://exemplo.com/kit-de-maquiagem" },
+            { "item": "Perfume importado", "link": "https://exemplo.com/perfume-importado" },
+            { "item": "Bolsa de couro", "link": "https://exemplo.com/bolsa-de-couro" }
+        ]
+    },
+    {
+        "nome": "jader junio",
+        "sugestoes": [
+            { "item": "Relógio de pulso", "link": "https://exemplo.com/relogio-de-pulso" },
+            { "item": "Óculos de sol", "link": "https://exemplo.com/oculos-de-sol" },
+            { "item": "Carteira de couro", "link": "https://exemplo.com/carteira-de-couro" }
+        ]
+    },
+    {
+        "nome": "matehus frança",
+        "sugestoes": [
+            { "item": "Kit de ferramentas", "link": "https://exemplo.com/kit-de-ferramentas"},
+            { "item": "Churrasqueira portátil", "link": "https://exemplo.com/churrasqueira-portatil" },
+            { "item": "Kit de jardinagem", "link": "https://exemplo.com/kit-de-jardinagem" }
+        ]
+    }
+]

@@ -16,7 +16,7 @@ body {
   background-color: white;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
   width: 90%;
   max-width: 400px;
   text-align: center;
@@ -40,7 +40,7 @@ label {
 
 /* Inputs e selects */
 select, input {
-  width: 100%;
+  width: 90%;
   padding: 12px;
   margin: 10px 0 20px;
   border: 1px solid #d6d1e1;
@@ -109,7 +109,8 @@ button:hover {
 
   .container {
       padding: 20px;
-      border-radius: 12px;
+      border-radius: 14px;
+      max-width: 85%;
   }
 
   #resultado {
@@ -117,17 +118,17 @@ button:hover {
   }
 }
 
-/* Estilos dos confetes (usando emojis) */
+/* Confetes - Versão Geral */
 .confetti {
   position: fixed;
-  font-size: 2.5rem;  /* Aumentar o tamanho do emoji */
+  font-size: 2.5rem;  /* Tamanho original dos confetes */
   opacity: 0.8;
   z-index: 9999;
   pointer-events: none;
-  animation: explosion 2.5s ease-out forwards;
+  animation: explosion 3s ease-out forwards;  /* Duração aumentada */
 }
 
-/* Animação para simular a explosão */
+/* Animação de explosão */
 @keyframes explosion {
   0% {
     transform: translate(0, 0) scale(1);
@@ -137,4 +138,92 @@ button:hover {
     transform: translate(calc(var(--x) * 1vw), calc(var(--y) * 1vh)) scale(0.5);
     opacity: 0;
   }
+}
+
+/* Ajuste de confetes para telas menores */
+@media (max-width: 600px) {
+  /* Confetes menores e mais rápidos */
+  .confetti {
+    font-size: 2.8rem;  /* Reduz o tamanho do emoji em celulares */
+    animation: explosion 3s ease-out forwards;  /* Animação ligeiramente mais rápida */
+  }
+
+  @keyframes explosion {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(calc(var(--x) * 3vw), calc(var(--y) * 1vh)) scale(0.3);  /* Maior movimentação em celulares */
+      opacity: 0;
+    }
+  }
+}
+
+/* Ajuste adicional para telas muito pequenas (ex: iPhone SE ou similar) */
+@media (max-width: 400px) {
+  .confetti {
+    font-size: 2.5rem;  /* Ainda menor para telas muito pequenas */
+    animation: explosion 3.0s ease-out forwards;  /* Explosão mais rápida */
+  }
+
+  @keyframes explosion {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(calc(var(--x) * 3vw), calc(var(--y) * 1vh)) scale(0.2);  /* Aumenta a dispersão */
+      opacity: 0;
+    }
+  }
+}
+
+/* Estilos para a lista de sugestões */
+#resultado ul {
+  list-style-type: none;  /* Remove bullets padrão */
+  padding: 0;
+  margin-top: 40px;  /* Espaçamento entre o resultado e a lista */
+}
+
+#resultado ul li {
+  background-color: #f9f6ff;  /* Fundo suave para cada sugestão */
+  border: 1px solid #d6d1e1;
+  border-radius: 10px;  /* Bordas arredondadas */
+  padding: 10px;
+  margin-bottom: 10px;  /* Espaçamento entre os itens */
+  font-size: 0.8em;
+  color: #5b3f8d;  /* Cor do texto */
+  display: flex;
+  align-items: center;
+}
+
+#resultado ul li::before {
+  content: '🎁';  /* Ícone de presente antes de cada sugestão */
+  margin-right: 10px;
+  font-size: 1.3em;
+}
+
+/* Ajustes para a lista de sugestões em dispositivos móveis */
+@media (max-width: 600px) {
+  #resultado ul li {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  #resultado ul li::before {
+    font-size: 1.1em;
+  }
+}
+
+#resultado a {
+  color: inherit;  /* Mantém a mesma cor do texto ao redor */
+  text-decoration: none;  /* Remove o sublinhado dos links */
+  font-weight: normal;  /* Garante que o texto tenha o mesmo peso */
+}
+
+/* Efeito hover opcional (ao passar o mouse) */
+#resultado a:hover {
+  color: #6a5b8c;  /* Opcional: muda a cor no hover (roxo suave) */
+  text-decoration: underline;  /* Pode adicionar um sublinhado no hover */
 }
