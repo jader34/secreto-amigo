@@ -171,3 +171,17 @@ async function login() {
     resultadoDiv.classList.add('show');
   }
 }
+
+// Seleciona o elemento <select>
+const selectElement = document.getElementById('name');
+
+// Adiciona um listener para o evento "change"
+selectElement.addEventListener('change', function() {
+  // Adiciona a classe 'changed' para disparar a animação
+  selectElement.classList.add('changed');
+  
+  // Remove a classe 'changed' após a animação para permitir futuras animações
+  setTimeout(() => {
+    selectElement.classList.remove('changed');
+  }, 500);  // A duração deve ser igual à duração da animação no CSS (0.5s)
+});

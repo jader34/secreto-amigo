@@ -54,5 +54,77 @@
             { "item": "Churrasqueira portátil", "link": "https://exemplo.com/churrasqueira-portatil" },
             { "item": "Kit de jardinagem", "link": "https://exemplo.com/kit-de-jardinagem" }
         ]
+    },
+    {
+        "nome": "kameli",
+        "sugestoes": [
+            { "item": "Kit de costura", "link": "https://exemplo.com/kit-de-costura" },
+            { "item": "Máquina de café expresso", "link": "https://exemplo.com/maquina-de-cafe-expresso" },
+            { "item": "Kit de crochê", "link": "https://exemplo.com/kit-de-croche" }
+        ]
+    },
+    {
+        "nome": "julia vais",
+        "sugestoes": [
+            { "item": "Kit de pintura", "link": "https://exemplo.com/kit-de-pintura" },
+            { "item": "Livro de receitas", "link": "https://exemplo.com/livro-de-receitas" },
+            { "item": "Kit de desenho", "link": "https://exemplo.com/kit-de-desenho" }
+        ]
+    },
+    {
+        "nome": "loeza vebester",
+        "sugestoes": [
+            { "item": "Kit de velas aromáticas", "link": "https://exemplo.com/kit-de-velas-aromaticas" },
+            { "item": "Kit de banho", "link": "https://exemplo.com/kit-de-banho" },
+            { "item": "Kit de massagem", "link": "https://exemplo.com/kit-de-massagem" }
+        ]
+    },
+    {
+        "nome": "carol",
+        "sugestoes": [
+            { "item": "Kit de yoga", "link": "https://exemplo.com/kit-de-yoga" },
+            { "item": "Kit de meditação", "link": "https://exemplo.com/kit-de-meditacao" },
+            { "item": "Kit de aromaterapia", "link": "https://exemplo.com/kit-de-aromaterapia" }
+        ]
+    },
+    {
+        "nome": "murilo peroba",
+        "sugestoes": [
+            { "item": "Kit de cerveja artesanal", "link": "https://exemplo.com/kit-de-cerveja-artesanal" },
+            { "item": "Kit de vinhos", "link": "https://exemplo.com/kit-de-vinhos" },
+            { "item": "Kit de queijos", "link": "https://exemplo.com/kit-de-queijos" }
+        ]
+    },
+    {
+        "nome": "neves",
+        "sugestoes": [
+            { "item": "Kit de chás", "link": "https://exemplo.com/kit-de-chas" },
+            { "item": "Kit de café", "link": "https://exemplo.com/kit-de-cafe" },
+            { "item": "Kit de temperos", "link": "https://exemplo.com/kit-de-temperos" }
+        ]
+    },
+    {
+        "nome": "mateus chimia",
+        "sugestoes": [
+            { "item": "Kit de cerveja artesanal", "link": "https://exemplo.com/kit-de-cerveja-artesanal" },
+            { "item": "Kit de vinhos", "link": "https://exemplo.com/kit-de-vinhos" },
+            { "item": "Kit de queijos", "link": "https://exemplo.com/kit-de-queijos" }
+        ]
+    },
+    {
+        "nome": "gabreu freitas",
+        "sugestoes": [
+            { "item": "Kit de cerveja artesanal", "link": "https://exemplo.com/kit-de-cerveja-artesanal" },
+            { "item": "Kit de vinhos", "link": "https://exemplo.com/kit-de-vinhos" },
+            { "item": "Kit de queijos", "link": "https://exemplo.com/kit-de-queijos" }
+        ]
+    },
+    {
+        "nome": "kau rito",
+        "sugestoes": [
+            { "item": "Kit de cerveja artesanal", "link": "https://exemplo.com/kit-de-cerveja-artesanal" },
+            { "item": "Kit de vinhos", "link": "https://exemplo.com/kit-de-vinhos" },
+            { "item": "Kit de queijos", "link": "https://exemplo.com/kit-de-queijos" }
+        ]
     }
 ]

@@ -39,14 +39,81 @@ label {
 }
 
 /* Inputs e selects */
-select, input {
+input {
   width: 90%;
   padding: 12px;
   margin: 10px 0 20px;
-  border: 1px solid #d6d1e1;
+  border: 2px solid #d6d1e1;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+  outline: none;
+}
+
+select {
+  appearance: none;  /* Remove o estilo padrão do sistema */
+  -webkit-appearance: none; /* Remover no Safari/Chrome mobile */
+  -moz-appearance: none; /* Remove no Firefox */
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 2px solid #d6d1e1;
   border-radius: 8px;
   font-size: 1em;
   transition: border-color 0.3s ease;
+  box-shadow: 0px 0px 20px -18px;
+  outline: none;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGwxMiAwLTIuMTI1IDIuMTI1TDYuMDAwIDhsLTcuMjUwLjc1MHoiIGZpbGw9IiM4ZTZiYTEiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px 12px;  /* Tamanho da seta personalizada */
+  text-align: center;
+  color: #7a4a9d;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;  /* Remove o highlight em navegadores WebKit */
+}
+
+/* Animação de fade in + scale */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Aplicando a animação ao valor do select */
+.select-animated.changed {
+  animation: fadeInScale 0.25s ease-in-out;
+}
+
+select:hover {
+  border-color: #7f5b92;  /* Muda a cor da borda ao passar o mouse */
+}
+
+/* Customizando a barra de rolagem apenas para navegadores WebKit */
+select::-webkit-scrollbar {
+  width: 14px;  /* Largura da barra de rolagem */
+}
+
+select::-webkit-scrollbar-track {
+  background-color: #f3f0f9;  /* Cor de fundo da trilha da barra */
+  border-radius: 10px;  /* Bordas arredondadas da trilha */
+}
+
+select::-webkit-scrollbar-thumb {
+  background-color: #977ea4;  /* Cor da parte que o usuário arrasta */
+  border-radius: 10px;  /* Bordas arredondadas */
+  border: 3.6px solid #f3f0f9;  /* Um pequeno espaçamento ao redor do thumb */
+}
+
+input:active {
+  transform: scale(0.95);
 }
 
 select:focus, input:focus {
@@ -55,6 +122,7 @@ select:focus, input:focus {
 
 /* Botão com efeito */
 button {
+  -webkit-tap-highlight-color: transparent;  /* Remove o highlight em navegadores WebKit */
   background-color: #8e6ba1;
   color: white;
   border: none;
@@ -64,11 +132,18 @@ button {
   font-size: 1.1em;
   width: 100%;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  outline: none;
 }
 
 button:hover {
   background-color: #7f5b92;
   transform: scale(1.05);
+}
+
+button:focus {
+  background: transparent;
+  color: #7f5b92;
+  box-shadow: 0 0 25px #776897;
 }
 
 /* Animação de revelação */
