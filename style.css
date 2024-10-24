@@ -13,6 +13,7 @@ body {
 
 /* Centralizando o conteúdo com responsividade */
 .container {
+  margin-top: 100px;
   background-color: white;
   padding: 30px;
   border-radius: 15px;
@@ -306,7 +307,7 @@ button:focus {
 /* The switch - the box around the slider */
 .switch {
   font-size: 17px;
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 20px;
   display: inline-block;
