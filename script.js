@@ -185,3 +185,27 @@ selectElement.addEventListener('change', function() {
     selectElement.classList.remove('changed');
   }, 500);  // A duração deve ser igual à duração da animação no CSS (0.5s)
 });
+
+// Seleciona o checkbox e o body
+const checkbox = document.querySelector('.input__check');
+const body = document.body;
+
+// Verifica se o tema foi salvo no localStorage
+const savedTheme = localStorage.getItem('theme');
+
+// Se o tema escuro foi salvo, aplica-o
+if (savedTheme === 'dark') {
+  body.classList.add('dark-mode');
+  checkbox.checked = true;  // Define o checkbox como marcado
+}
+
+// Alterna entre os temas claro e escuro ao clicar no switch
+checkbox.addEventListener('change', function() {
+  if (checkbox.checked) {
+    body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');  // Salva a preferência no localStorage
+  } else {
+    body.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light');  // Salva a preferência no localStorage
+  }
+});
