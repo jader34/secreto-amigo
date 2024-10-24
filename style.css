@@ -9,11 +9,19 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow: hidden;  /* Oculta as barras de rolagem */
+  overflow-y: scroll; /* Permite a rolagem vertical, mas sem a barra */
+}
+
+/* Remove visualmente a barra de rolagem no WebKit (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+  display: none; /* Oculta a barra de rolagem */
 }
 
 /* Centralizando o conteúdo com responsividade */
 .container {
   margin-top: 100px;
+  margin-bottom: 50px;
   background-color: white;
   padding: 30px;
   border-radius: 15px;
