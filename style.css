@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
 
 /* Centralizando o conteúdo com responsividade */
 .container {
-  margin-top: 100px;
+  margin-top: 90px;
   margin-bottom: 50px;
   background-color: white;
   padding: 30px;
@@ -319,8 +319,8 @@ button:focus {
   top: 30px;
   right: 20px;
   display: inline-block;
-  width: 3.5em;
-  height: 2em;
+  width: 2.8em;
+  height: 1.6em;
   transform-style: preserve-3d;
   perspective: 500px;
   z-index: 1000;
@@ -369,10 +369,10 @@ radial-gradient(at 55% 24%, hsla(138,60%,62%,1) 0px, transparent 50%);
 .slider:before {
   position: absolute;
   content: "";
-  height: 1.4em;
-  width: 1.4em;
-  left: 0.3em;
-  bottom: 0.35em;
+  height: 1.12em;
+  width: 1.12em;
+  left: 0.24em;
+  bottom: 0.28em;
   transition: .4s;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -10px 10px 0px inset,
@@ -388,7 +388,7 @@ radial-gradient(at 55% 24%, hsla(138,60%,62%,1) 0px, transparent 50%);
 }
 
 .input__check:checked + .slider:before {
-  transform: translateX(1.5em);
+  transform: translateX(1.2em);
 }
 
 /* Tema Escuro */
