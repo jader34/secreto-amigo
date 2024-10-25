@@ -20,8 +20,6 @@ body::-webkit-scrollbar {
 
 /* Centralizando o conteúdo com responsividade */
 .container {
-  margin-top: 90px;
-  margin-bottom: 90px;
   background-color: white;
   padding: 30px;
   border-radius: 15px;
@@ -192,6 +190,8 @@ button:focus {
   }
 
   .container {
+      margin-top: 90px;
+      margin-bottom: 90px;
       padding: 20px;
       border-radius: 14px;
       max-width: 85%;
