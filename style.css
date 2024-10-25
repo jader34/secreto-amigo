@@ -172,6 +172,10 @@ button:focus {
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 600px) {
+  body {
+    min-height: 100dvh; /* Usa a altura dinâmica da tela, adaptando-se ao mobile */
+  }
+
   h1 {
       font-size: 1.5em;
   }
@@ -190,8 +194,8 @@ button:focus {
   }
 
   .container {
-      margin-top: 15dvh;
-      margin-bottom: 15dvh;
+      margin-top: 90px;
+      margin-bottom: 90px;
       padding: 20px;
       border-radius: 14px;
       max-width: 85%;
