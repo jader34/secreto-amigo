@@ -190,8 +190,8 @@ button:focus {
   }
 
   .container {
-      margin-top: 90px;
-      margin-bottom: 90px;
+      margin-top: 15dvh;
+      margin-bottom: 15dvh;
       padding: 20px;
       border-radius: 14px;
       max-width: 85%;
