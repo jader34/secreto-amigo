@@ -11,11 +11,16 @@ body {
   min-height: 100vh;
   overflow: hidden;  /* Oculta as barras de rolagem */
   overflow-y: scroll; /* Permite a rolagem vertical, mas sem a barra */
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 /* Remove visualmente a barra de rolagem no WebKit (Chrome, Safari, etc.) */
 body::-webkit-scrollbar {
   display: none; /* Oculta a barra de rolagem */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Centralizando o conteúdo com responsividade */
@@ -28,6 +33,8 @@ body::-webkit-scrollbar {
   max-width: 400px;
   text-align: center;
   transition: all 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Títulos e textos */
@@ -85,7 +92,7 @@ select {
 /* Animação de fade in + scale */
 @keyframes fadeInScale {
   0% {
-    opacity: 0.3;
+    opacity: 0.2;
     transform: scale(0.8);
   }
   100% {
@@ -96,7 +103,7 @@ select {
 
 /* Aplicando a animação ao valor do select */
 .select-animated.changed {
-  animation: fadeInScale 0.25s ease-in-out;
+  animation: fadeInScale 0.3s ease-in-out;
 }
 
 select:hover {
@@ -483,4 +490,3 @@ body.dark-mode #resultado ul li {
   border: 1px solid #565676; /* Borda suave no tema escuro */
   color: #c2b6db; /* Cor do texto no tema escuro */
 }
-
